@@ -17,9 +17,9 @@ const Grid = styled.div`
   grid-template-columns: repeat(auto-fill, 125px);
   grid-gap: 25px;
 `;
-const Section = () => (
+const Section = ({ title, children }) => (
   <Container>
-    <Title></Title>
+    <Title>{title}</Title>
     <Grid></Grid>
   </Container>
 );
