@@ -8,7 +8,7 @@ export default class extends React.Component {
     upcoming: null,
     popular: null,
     error: null,
-    loading: false
+    loading: true
   };
   async componentDidMount() {
     try {
@@ -31,7 +31,7 @@ export default class extends React.Component {
         error: "Can't find any movies"
       });
     } finally {
-      this.setState({ loading: true });
+      this.setState({ loading: false });
     }
   }
   render() {

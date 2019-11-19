@@ -20,12 +20,16 @@ const Grid = styled.div`
 const Section = ({ title, children }) => (
   <Container>
     <Title>{title}</Title>
-    <Grid></Grid>
+    <Grid>{children}</Grid>
   </Container>
 );
 
 Section.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
 };
 
 export default Section;

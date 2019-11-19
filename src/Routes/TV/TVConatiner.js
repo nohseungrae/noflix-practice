@@ -8,7 +8,7 @@ export default class extends React.Component {
     popular: null,
     airingToday: null,
     error: null,
-    loading: false
+    loading: true
   };
   async componentDidMount() {
     try {
@@ -32,7 +32,7 @@ export default class extends React.Component {
       });
     } finally {
       this.setState({
-        loading: true
+        loading: false
       });
     }
   }
